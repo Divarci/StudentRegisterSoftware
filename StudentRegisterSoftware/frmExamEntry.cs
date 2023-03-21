@@ -115,6 +115,13 @@ namespace StudentRegisterSoftware
             pictureBox4.Visible = false;
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            frmLogin fr = new frmLogin();
+            fr.Show();
+            this.Close();
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // update record

@@ -67,6 +67,7 @@
             this.btnExit.TabIndex = 18;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel1
             // 
@@ -137,6 +138,7 @@
             this.llSU.TabIndex = 16;
             this.llSU.TabStop = true;
             this.llSU.Text = "SIGN UP";
+            this.llSU.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llSU_LinkClicked);
             // 
             // txtPass
             // 
@@ -205,6 +207,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
