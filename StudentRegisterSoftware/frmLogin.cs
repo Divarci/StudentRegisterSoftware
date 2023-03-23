@@ -49,7 +49,7 @@ namespace StudentRegisterSoftware
                 else
                 {
 
-                    SqlCommand cmd2 = new SqlCommand("Select tcusername,tcpass,tcName,tcSurname,tcid from Tbl_Teachers where tcusername=@p1 and tcpass=@p2", conn.conn());
+                    SqlCommand cmd2 = new SqlCommand("Select tcusername,tcpass,tcName,tcSurname,ntcid from Tbl_Teachers where tcusername=@p1 and tcpass=@p2", conn.conn());
                     cmd2.Parameters.AddWithValue("@p1", mskId.Text);
                     cmd2.Parameters.AddWithValue("@p2", txtPass.Text);
                     SqlDataReader dr2 = cmd2.ExecuteReader();
@@ -125,7 +125,7 @@ namespace StudentRegisterSoftware
         {
             frmSignUp fr = new frmSignUp();
             fr.Show();
-            this.Hide();
+           
         }
     }
 }

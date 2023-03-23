@@ -29,7 +29,7 @@ namespace StudentRegisterSoftware
 
         public void ListViaIndexChange(string condition, ComboBox cmb)
         {
-            SqlCommand cmd2 = new SqlCommand("select resid,(stname+' '+stsurname) as 'STUDENT NAME', (tcname+' '+tcsurname) as 'TEACHER NAME',tcbrans as 'LESSON', resexone as 'EXAM 1', resextwo as 'EXAM 2', resexthree as 'EXAM 3', resexavg as 'EXAM AVERAGE',resstatus as 'STATUS', restcid from Tbl_Exams \r\ninner join Tbl_Students\r\non Tbl_Exams.resstid = Tbl_Students.stid\r\ninner join Tbl_Teachers\r\non Tbl_Exams.restcid = Tbl_Teachers.tcid where " + condition, conn.conn());
+            SqlCommand cmd2 = new SqlCommand("select resid,(stname+' '+stsurname) as 'STUDENT NAME', (tcname+' '+tcsurname) as 'TEACHER NAME',tcbrans as 'LESSON', resexone as 'EXAM 1', resextwo as 'EXAM 2', resexthree as 'EXAM 3', resexavg as 'EXAM AVERAGE',resstatus as 'STATUS', restcid from Tbl_Exams \r\ninner join Tbl_Students\r\non Tbl_Exams.resstid = Tbl_Students.stid\r\ninner join Tbl_Teachers\r\non Tbl_Exams.restcid = Tbl_Teachers.Ntcid where " + condition, conn.conn());
             cmd2.Parameters.AddWithValue("@p1", cmb.SelectedValue);
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
             DataTable dt2 = new DataTable();

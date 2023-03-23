@@ -64,7 +64,7 @@
             this.btnExit.Location = new System.Drawing.Point(213, 152);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(84, 30);
-            this.btnExit.TabIndex = 18;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -110,7 +110,7 @@
             this.cb1.Location = new System.Drawing.Point(119, 121);
             this.cb1.Name = "cb1";
             this.cb1.Size = new System.Drawing.Size(116, 23);
-            this.cb1.TabIndex = 15;
+            this.cb1.TabIndex = 2;
             this.cb1.Text = "I am human";
             this.cb1.UseVisualStyleBackColor = true;
             // 
@@ -123,7 +123,7 @@
             this.btnSI.Location = new System.Drawing.Point(119, 152);
             this.btnSI.Name = "btnSI";
             this.btnSI.Size = new System.Drawing.Size(84, 30);
-            this.btnSI.TabIndex = 17;
+            this.btnSI.TabIndex = 3;
             this.btnSI.Text = "SIGN IN";
             this.btnSI.UseVisualStyleBackColor = false;
             this.btnSI.Click += new System.EventHandler(this.btnSI_Click);
@@ -135,7 +135,7 @@
             this.llSU.Location = new System.Drawing.Point(303, 89);
             this.llSU.Name = "llSU";
             this.llSU.Size = new System.Drawing.Size(70, 19);
-            this.llSU.TabIndex = 16;
+            this.llSU.TabIndex = 5;
             this.llSU.TabStop = true;
             this.llSU.Text = "SIGN UP";
             this.llSU.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llSU_LinkClicked);
@@ -144,11 +144,10 @@
             // 
             this.txtPass.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(119, 86);
-            this.txtPass.MaxLength = 20;
+            this.txtPass.MaxLength = 12;
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(178, 26);
-            this.txtPass.TabIndex = 13;
-            this.txtPass.Text = "AAAAA";
+            this.txtPass.TabIndex = 1;
             this.txtPass.UseSystemPasswordChar = true;
             // 
             // mskId
@@ -156,11 +155,10 @@
             this.mskId.Culture = new System.Globalization.CultureInfo("en-GB");
             this.mskId.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskId.Location = new System.Drawing.Point(119, 53);
-            this.mskId.Mask = "0000000000";
+            this.mskId.Mask = "000000000000";
             this.mskId.Name = "mskId";
             this.mskId.Size = new System.Drawing.Size(178, 26);
-            this.mskId.TabIndex = 11;
-            this.mskId.Text = "11111";
+            this.mskId.TabIndex = 0;
             this.mskId.ValidatingType = typeof(int);
             // 
             // label2
