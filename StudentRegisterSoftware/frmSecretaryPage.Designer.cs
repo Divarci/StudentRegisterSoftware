@@ -85,6 +85,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblAdmNameSurname = new System.Windows.Forms.Label();
             this.btnReqList = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInbox)).BeginInit();
             this.pnlSt.SuspendLayout();
@@ -95,6 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -209,6 +213,7 @@
             this.btnStUpdate.TabIndex = 9;
             this.btnStUpdate.Text = "UPDATE";
             this.btnStUpdate.UseVisualStyleBackColor = true;
+            this.btnStUpdate.Click += new System.EventHandler(this.btnStUpdate_Click);
             // 
             // btnStSave
             // 
@@ -227,6 +232,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.YellowGreen;
+            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.lblStudent);
             this.panel4.Location = new System.Drawing.Point(-1, 328);
             this.panel4.Name = "panel4";
@@ -560,6 +566,7 @@
             this.btnTcUpdate.TabIndex = 19;
             this.btnTcUpdate.Text = "UPDATE";
             this.btnTcUpdate.UseVisualStyleBackColor = true;
+            this.btnTcUpdate.Click += new System.EventHandler(this.btnTcUpdate_Click);
             // 
             // btnTcSave
             // 
@@ -578,6 +585,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.LightCoral;
+            this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.label17);
             this.panel6.Location = new System.Drawing.Point(-1, 328);
             this.panel6.Name = "panel6";
@@ -600,7 +608,7 @@
             this.panel8.Controls.Add(this.dataGridView1);
             this.panel8.Location = new System.Drawing.Point(10, 376);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(885, 334);
+            this.panel8.Size = new System.Drawing.Size(885, 216);
             this.panel8.TabIndex = 28;
             // 
             // dataGridView1
@@ -610,10 +618,13 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(885, 334);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(885, 216);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -658,7 +669,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LimeGreen;
             this.panel1.Controls.Add(this.lblAdmNameSurname);
-            this.panel1.Location = new System.Drawing.Point(-2, 716);
+            this.panel1.Location = new System.Drawing.Point(-2, 598);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(914, 34);
             this.panel1.TabIndex = 29;
@@ -676,17 +687,43 @@
             // 
             // btnReqList
             // 
-            this.btnReqList.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnReqList.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnReqList.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
             this.btnReqList.FlatAppearance.BorderSize = 2;
             this.btnReqList.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.btnReqList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReqList.ForeColor = System.Drawing.Color.Black;
             this.btnReqList.Location = new System.Drawing.Point(381, 329);
             this.btnReqList.Name = "btnReqList";
             this.btnReqList.Size = new System.Drawing.Size(146, 41);
             this.btnReqList.TabIndex = 21;
             this.btnReqList.Text = "REQUEST LIST";
-            this.btnReqList.UseVisualStyleBackColor = true;
+            this.btnReqList.UseVisualStyleBackColor = false;
             this.btnReqList.Click += new System.EventHandler(this.btnReqList_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(320, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(320, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // frmSecretaryPage
             // 
@@ -694,7 +731,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(905, 747);
+            this.ClientSize = new System.Drawing.Size(905, 639);
             this.Controls.Add(this.btnReqList);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
@@ -728,6 +765,8 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -790,5 +829,7 @@
         private System.Windows.Forms.ToolStripMenuItem copyToBoardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

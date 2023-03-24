@@ -91,7 +91,7 @@ namespace StudentRegisterSoftware
 
         private void frmStudentPage_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select (tcname+' '+tcsurname) as 'TEACHER', tcbrans as 'LESSONS', resexone as'EXAM 1', resextwo as'EXAM 2', resexthree as'EXAM 3', resexavg as'AVERAGE', resstatus as'STATUS' from Tbl_Exams \r\ninner join Tbl_Teachers\r\non Tbl_Exams.restcid=Tbl_Teachers.tcid\r\ninner join Tbl_Students\r\non Tbl_Exams.resstid=Tbl_Students.stid where stid=@p1", conn.conn() );
+            SqlCommand cmd = new SqlCommand("select (tcname+' '+tcsurname) as 'TEACHER', tcbrans as 'LESSONS', resexone as'EXAM 1', resextwo as'EXAM 2', resexthree as'EXAM 3', resexavg as'AVERAGE', resstatus as'STATUS' from Tbl_Exams \r\ninner join Tbl_Teachers\r\non Tbl_Exams.restcid=Tbl_Teachers.ntcid\r\ninner join Tbl_Students\r\non Tbl_Exams.resstid=Tbl_Students.stid where stid=@p1", conn.conn() );
             cmd.Parameters.AddWithValue("@p1", tempIdSt);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);

@@ -36,6 +36,7 @@ namespace StudentRegisterSoftware
             da2.Fill(dt2);
             dataGridView1.DataSource = dt2;
             dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[9].Visible = false;
         }
 
         public void ExamResultClear()

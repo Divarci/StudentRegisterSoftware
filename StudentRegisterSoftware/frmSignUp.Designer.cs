@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtStPass = new System.Windows.Forms.TextBox();
             this.cbSt = new System.Windows.Forms.CheckBox();
             this.btnStSend = new System.Windows.Forms.Button();
             this.mskStMobile = new System.Windows.Forms.MaskedTextBox();
@@ -50,6 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtTcPass = new System.Windows.Forms.TextBox();
             this.cbTc = new System.Windows.Forms.CheckBox();
             this.btnTcSend = new System.Windows.Forms.Button();
             this.mskTcMobile = new System.Windows.Forms.MaskedTextBox();
@@ -68,8 +70,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.txtStPass = new System.Windows.Forms.TextBox();
-            this.txtTcPass = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,6 +111,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(349, 348);
             this.panel3.TabIndex = 1;
+            // 
+            // txtStPass
+            // 
+            this.txtStPass.Location = new System.Drawing.Point(128, 51);
+            this.txtStPass.MaxLength = 12;
+            this.txtStPass.Name = "txtStPass";
+            this.txtStPass.Size = new System.Drawing.Size(189, 29);
+            this.txtStPass.TabIndex = 1;
             // 
             // cbSt
             // 
@@ -309,6 +317,14 @@
             this.panel5.Size = new System.Drawing.Size(349, 348);
             this.panel5.TabIndex = 1;
             // 
+            // txtTcPass
+            // 
+            this.txtTcPass.Location = new System.Drawing.Point(128, 51);
+            this.txtTcPass.MaxLength = 12;
+            this.txtTcPass.Name = "txtTcPass";
+            this.txtTcPass.Size = new System.Drawing.Size(189, 29);
+            this.txtTcPass.TabIndex = 10;
+            // 
             // cbTc
             // 
             this.cbTc.AutoSize = true;
@@ -361,7 +377,7 @@
             // txtTcBrans
             // 
             this.txtTcBrans.Location = new System.Drawing.Point(128, 156);
-            this.txtTcBrans.MaxLength = 5;
+            this.txtTcBrans.MaxLength = 20;
             this.txtTcBrans.Name = "txtTcBrans";
             this.txtTcBrans.Size = new System.Drawing.Size(189, 29);
             this.txtTcBrans.TabIndex = 13;
@@ -484,22 +500,6 @@
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // txtStPass
-            // 
-            this.txtStPass.Location = new System.Drawing.Point(128, 51);
-            this.txtStPass.MaxLength = 12;
-            this.txtStPass.Name = "txtStPass";
-            this.txtStPass.Size = new System.Drawing.Size(189, 29);
-            this.txtStPass.TabIndex = 1;
-            // 
-            // txtTcPass
-            // 
-            this.txtTcPass.Location = new System.Drawing.Point(128, 51);
-            this.txtTcPass.MaxLength = 12;
-            this.txtTcPass.Name = "txtTcPass";
-            this.txtTcPass.Size = new System.Drawing.Size(189, 29);
-            this.txtTcPass.TabIndex = 10;
             // 
             // frmSignUp
             // 
