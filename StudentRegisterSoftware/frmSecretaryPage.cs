@@ -25,6 +25,7 @@ namespace StudentRegisterSoftware
         int switchId;
         public string tempUserName, tempPassword, tempName, tempSurname, tempEmail, tempMobile, tempClassBrans;
 
+        public string tempUserNameAdm, tempNameAdm, tempSurnameAdm, tempIdAdm;
 
         public void StudentClean()
         {
@@ -130,7 +131,7 @@ namespace StudentRegisterSoftware
             pnlSt.Enabled = tf5;
         }
 
-        public string tempUserNameAdm, tempNameAdm, tempSurnameAdm, tempIdAdm;
+        
 
         private void btnStUpdate_Click(object sender, EventArgs e)
         {
@@ -163,6 +164,16 @@ namespace StudentRegisterSoftware
         {
             TeacherClean();
             TempCashClean();
+        }
+
+        private void pbInbox_Click(object sender, EventArgs e)
+        {
+            frmAdminMessage fr = new frmAdminMessage();
+            fr.tempIdAdm = tempIdAdm;
+            fr.tempNameAdm = tempNameAdm;
+            fr.tempSurnameAdm = tempSurnameAdm;
+            fr.Show();
+
         }
 
         private void btnTcSave_Click(object sender, EventArgs e)

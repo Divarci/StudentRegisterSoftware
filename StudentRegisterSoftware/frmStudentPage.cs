@@ -78,6 +78,10 @@ namespace StudentRegisterSoftware
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             frmStudentMessage fr = new frmStudentMessage();
+            fr.tempUserNameSt = tempUserNameSt;
+            fr.tempIdSt = tempIdSt;
+            fr.tempNameSt = tempNameSt;
+            fr.tempSurnameSt = tempSurnameSt;
             fr.Show();
         }
 

@@ -38,6 +38,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.mskex3 = new System.Windows.Forms.MaskedTextBox();
+            this.mskex2 = new System.Windows.Forms.MaskedTextBox();
+            this.mskex1 = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbClass = new System.Windows.Forms.ComboBox();
@@ -57,9 +60,6 @@
             this.deleteDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mskex1 = new System.Windows.Forms.MaskedTextBox();
-            this.mskex2 = new System.Windows.Forms.MaskedTextBox();
-            this.mskex3 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -94,6 +94,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(25, 10);
             this.pictureBox1.Name = "pictureBox1";
@@ -101,6 +102,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -169,6 +171,33 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(292, 423);
             this.panel3.TabIndex = 3;
+            // 
+            // mskex3
+            // 
+            this.mskex3.Location = new System.Drawing.Point(91, 244);
+            this.mskex3.Mask = "00";
+            this.mskex3.Name = "mskex3";
+            this.mskex3.Size = new System.Drawing.Size(43, 29);
+            this.mskex3.TabIndex = 18;
+            this.mskex3.ValidatingType = typeof(int);
+            // 
+            // mskex2
+            // 
+            this.mskex2.Location = new System.Drawing.Point(91, 200);
+            this.mskex2.Mask = "00";
+            this.mskex2.Name = "mskex2";
+            this.mskex2.Size = new System.Drawing.Size(43, 29);
+            this.mskex2.TabIndex = 17;
+            this.mskex2.ValidatingType = typeof(int);
+            // 
+            // mskex1
+            // 
+            this.mskex1.Location = new System.Drawing.Point(91, 156);
+            this.mskex1.Mask = "00";
+            this.mskex1.Name = "mskex1";
+            this.mskex1.Size = new System.Drawing.Size(43, 29);
+            this.mskex1.TabIndex = 16;
+            this.mskex1.ValidatingType = typeof(int);
             // 
             // pictureBox3
             // 
@@ -370,33 +399,6 @@
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
             this.cancelToolStripMenuItem.Text = "Cancel";
-            // 
-            // mskex1
-            // 
-            this.mskex1.Location = new System.Drawing.Point(91, 156);
-            this.mskex1.Mask = "00";
-            this.mskex1.Name = "mskex1";
-            this.mskex1.Size = new System.Drawing.Size(43, 29);
-            this.mskex1.TabIndex = 16;
-            this.mskex1.ValidatingType = typeof(int);
-            // 
-            // mskex2
-            // 
-            this.mskex2.Location = new System.Drawing.Point(91, 200);
-            this.mskex2.Mask = "00";
-            this.mskex2.Name = "mskex2";
-            this.mskex2.Size = new System.Drawing.Size(43, 29);
-            this.mskex2.TabIndex = 17;
-            this.mskex2.ValidatingType = typeof(int);
-            // 
-            // mskex3
-            // 
-            this.mskex3.Location = new System.Drawing.Point(91, 244);
-            this.mskex3.Mask = "00";
-            this.mskex3.Name = "mskex3";
-            this.mskex3.Size = new System.Drawing.Size(43, 29);
-            this.mskex3.TabIndex = 18;
-            this.mskex3.ValidatingType = typeof(int);
             // 
             // frmExamEntry
             // 

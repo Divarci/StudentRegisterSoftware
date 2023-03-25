@@ -124,6 +124,18 @@ namespace StudentRegisterSoftware
             this.Close();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmTeacherMessage fr = new frmTeacherMessage();
+            fr.tempName = tempName;
+            fr.tempSurname = tempSurname;
+            fr.temptcid = temptcid;
+            fr.tempUserName = tempUserName;
+
+            fr.Show();
+
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // update record

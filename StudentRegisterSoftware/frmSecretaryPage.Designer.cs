@@ -41,6 +41,7 @@
             this.btnStUpdate = new System.Windows.Forms.Button();
             this.btnStSave = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblStudent = new System.Windows.Forms.Label();
             this.mskStUserName = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,6 +75,7 @@
             this.btnTcUpdate = new System.Windows.Forms.Button();
             this.btnTcSave = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -85,20 +87,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblAdmNameSurname = new System.Windows.Forms.Label();
             this.btnReqList = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInbox)).BeginInit();
             this.pnlSt.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTc.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -135,6 +135,7 @@
             // 
             // pbInbox
             // 
+            this.pbInbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbInbox.Image = ((System.Drawing.Image)(resources.GetObject("pbInbox.Image")));
             this.pbInbox.Location = new System.Drawing.Point(401, 7);
             this.pbInbox.Name = "pbInbox";
@@ -142,6 +143,7 @@
             this.pbInbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbInbox.TabIndex = 6;
             this.pbInbox.TabStop = false;
+            this.pbInbox.Click += new System.EventHandler(this.pbInbox_Click);
             // 
             // pnlSt
             // 
@@ -238,6 +240,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(355, 34);
             this.panel4.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(320, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblStudent
             // 
@@ -592,6 +606,18 @@
             this.panel6.Size = new System.Drawing.Size(355, 34);
             this.panel6.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(320, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -701,30 +727,6 @@
             this.btnReqList.UseVisualStyleBackColor = false;
             this.btnReqList.Click += new System.EventHandler(this.btnReqList_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(320, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(320, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // frmSecretaryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -756,17 +758,17 @@
             this.pnlSt.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTc.ResumeLayout(false);
             this.pnlTc.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
