@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace StudentRegisterSoftware
         }
 
         sqlconnection conn = new sqlconnection();
+
 
         public void SendMessage(string From, MaskedTextBox UN, TextBox Pass, TextBox Name, TextBox Surname, TextBox Class, TextBox Email, MaskedTextBox Mobile)
         {
@@ -42,30 +44,86 @@ namespace StudentRegisterSoftware
             Class.Text = "";
             Email.Text = "";
             Mobile.Text = "";
+
         }
 
         private void btnStSend_Click(object sender, EventArgs e)
         {
-            if (cbSt.Checked)
+
+            SqlCommand select = new SqlCommand("Select stusername from Tbl_Students where stusername=@p1", conn.conn());
+            select.Parameters.AddWithValue("@p1", mskStUserName.Text);
+            SqlDataReader dr = select.ExecuteReader();
+            if (dr.Read())
             {
-                SendMessage("Student", mskStUserName, txtStPass, txtStName, txtStSurname, txtClass, txtStEmail, mskStMobile);
+                mskStUserName.Text = dr[0].ToString();
+                MessageBox.Show("This Username has been Taken by Another Student. Please choose another Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             else
             {
-                MessageBox.Show("Please accept Terms & Conditions", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ; SqlCommand select2 = new SqlCommand("Select requsername,reqfrom from Tbl_RegisterRequest where requsername=@p1 and reqfrom=@p2", conn.conn());
+                select2.Parameters.AddWithValue("@p1", mskStUserName.Text);
+                select2.Parameters.AddWithValue("@p2", "Student");
+                SqlDataReader dr2 = select2.ExecuteReader();
+                if (dr2.Read())
+                {
+                    mskStUserName.Text = dr2[0].ToString();
+                    MessageBox.Show("This Username has been Requested by Another Student. Please choose another Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (cbSt.Checked)
+                    {
+                        SendMessage("Student", mskStUserName, txtStPass, txtStName, txtStSurname, txtClass, txtStEmail, mskStMobile);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please accept Terms & Conditions", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
+
+
+            cbSt.Checked = false;
         }
 
         private void btnTcSend_Click(object sender, EventArgs e)
         {
-            if (cbTc.Checked)
+
+            SqlCommand select = new SqlCommand("Select tcusername from Tbl_Teachers where tcusername=@p1", conn.conn());
+            select.Parameters.AddWithValue("@p1", mskTcUsername.Text);
+            SqlDataReader dr = select.ExecuteReader();
+            if (dr.Read())
             {
-                SendMessage("Teacher", mskTcUsername, txtTcPass, txtTcName, txtTcSurname, txtTcBrans, txtTcEmail, mskTcMobile);
+                mskTcUsername.Text = dr[0].ToString();
+                MessageBox.Show("This Username has been Taken by Another teacher. Please choose another Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             else
             {
-                MessageBox.Show("Please accept Terms & Conditions", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ; SqlCommand select2 = new SqlCommand("Select requsername,reqfrom from Tbl_RegisterRequest where requsername=@p1 and reqfrom=@p2", conn.conn());
+                select2.Parameters.AddWithValue("@p1", mskTcUsername.Text);
+                select2.Parameters.AddWithValue("@p2", "Teacher");
+                SqlDataReader dr2 = select2.ExecuteReader();
+                if (dr2.Read())
+                {
+                    mskTcUsername.Text = dr2[0].ToString();
+                    MessageBox.Show("This Username has been Requested by Another Teacher. Please choose another Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (cbTc.Checked)
+                    {
+                        SendMessage("Teacher", mskTcUsername, txtTcPass, txtTcName, txtTcSurname, txtTcBrans, txtTcEmail, mskTcMobile);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please accept Terms & Conditions", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
+            cbTc.Checked = false;
         }
 
         private void btnExit_Click(object sender, EventArgs e)

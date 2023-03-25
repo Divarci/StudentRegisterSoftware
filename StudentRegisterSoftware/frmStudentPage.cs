@@ -75,7 +75,11 @@ namespace StudentRegisterSoftware
             lblSelectedLesson.Text = dataGridView1.Rows[choosen].Cells[1].Value.ToString();
         }
 
-      
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmStudentMessage fr = new frmStudentMessage();
+            fr.Show();
+        }
 
         private void btnLessFail_Click(object sender, EventArgs e)
         {

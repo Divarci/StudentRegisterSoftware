@@ -38,16 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbClass = new System.Windows.Forms.ComboBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtExamThird = new System.Windows.Forms.TextBox();
-            this.txtExamSecond = new System.Windows.Forms.TextBox();
-            this.txtExamFirst = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,12 +57,14 @@
             this.deleteDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mskex1 = new System.Windows.Forms.MaskedTextBox();
+            this.mskex2 = new System.Windows.Forms.MaskedTextBox();
+            this.mskex3 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -152,16 +150,15 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.mskex3);
+            this.panel3.Controls.Add(this.mskex2);
+            this.panel3.Controls.Add(this.mskex1);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.cmbClass);
             this.panel3.Controls.Add(this.btnExit);
             this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.btnSave);
-            this.panel3.Controls.Add(this.txtExamThird);
-            this.panel3.Controls.Add(this.txtExamSecond);
-            this.panel3.Controls.Add(this.txtExamFirst);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label6);
@@ -172,19 +169,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(292, 423);
             this.panel3.TabIndex = 3;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(227, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(42, 38);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -258,33 +242,12 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtExamThird
-            // 
-            this.txtExamThird.Location = new System.Drawing.Point(90, 244);
-            this.txtExamThird.Name = "txtExamThird";
-            this.txtExamThird.Size = new System.Drawing.Size(45, 29);
-            this.txtExamThird.TabIndex = 9;
-            // 
-            // txtExamSecond
-            // 
-            this.txtExamSecond.Location = new System.Drawing.Point(90, 200);
-            this.txtExamSecond.Name = "txtExamSecond";
-            this.txtExamSecond.Size = new System.Drawing.Size(45, 29);
-            this.txtExamSecond.TabIndex = 8;
-            // 
-            // txtExamFirst
-            // 
-            this.txtExamFirst.Location = new System.Drawing.Point(90, 156);
-            this.txtExamFirst.Name = "txtExamFirst";
-            this.txtExamFirst.Size = new System.Drawing.Size(45, 29);
-            this.txtExamFirst.TabIndex = 7;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(17, 250);
+            this.label10.Location = new System.Drawing.Point(17, 254);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 19);
             this.label10.TabIndex = 6;
@@ -295,7 +258,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(17, 206);
+            this.label9.Location = new System.Drawing.Point(17, 210);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 19);
             this.label9.TabIndex = 5;
@@ -306,7 +269,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(17, 162);
+            this.label6.Location = new System.Drawing.Point(17, 166);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 19);
             this.label6.TabIndex = 4;
@@ -408,6 +371,33 @@
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
             this.cancelToolStripMenuItem.Text = "Cancel";
             // 
+            // mskex1
+            // 
+            this.mskex1.Location = new System.Drawing.Point(91, 156);
+            this.mskex1.Mask = "00";
+            this.mskex1.Name = "mskex1";
+            this.mskex1.Size = new System.Drawing.Size(43, 29);
+            this.mskex1.TabIndex = 16;
+            this.mskex1.ValidatingType = typeof(int);
+            // 
+            // mskex2
+            // 
+            this.mskex2.Location = new System.Drawing.Point(91, 200);
+            this.mskex2.Mask = "00";
+            this.mskex2.Name = "mskex2";
+            this.mskex2.Size = new System.Drawing.Size(43, 29);
+            this.mskex2.TabIndex = 17;
+            this.mskex2.ValidatingType = typeof(int);
+            // 
+            // mskex3
+            // 
+            this.mskex3.Location = new System.Drawing.Point(91, 244);
+            this.mskex3.Mask = "00";
+            this.mskex3.Name = "mskex3";
+            this.mskex3.Size = new System.Drawing.Size(43, 29);
+            this.mskex3.TabIndex = 18;
+            this.mskex3.ValidatingType = typeof(int);
+            // 
             // frmExamEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -434,7 +424,6 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -456,9 +445,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtExamThird;
-        private System.Windows.Forms.TextBox txtExamSecond;
-        private System.Windows.Forms.TextBox txtExamFirst;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
@@ -477,7 +463,9 @@
         private System.Windows.Forms.ToolStripMenuItem deleteDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyToBoardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.MaskedTextBox mskex3;
+        private System.Windows.Forms.MaskedTextBox mskex2;
+        private System.Windows.Forms.MaskedTextBox mskex1;
     }
 }
 
