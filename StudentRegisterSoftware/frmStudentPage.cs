@@ -21,7 +21,7 @@ namespace StudentRegisterSoftware
 
         sqlconnection conn = new sqlconnection();
 
-        public string tempUserNameSt,tempNameSt,tempSurnameSt,tempIdSt;
+        public string tempUserNameSt, tempNameSt, tempSurnameSt, tempIdSt;
 
 
         public void FailPass(string status)
@@ -39,9 +39,9 @@ namespace StudentRegisterSoftware
 
         public void SortBy(string sortit)
         {
-            SqlCommand cmd = new SqlCommand("Select top 1 resexavg  from Tbl_Exams inner join Tbl_Students on Tbl_Exams.resstid=Tbl_Students.stid where stid=@p1 order by resexavg "+ sortit, conn.conn());
+            SqlCommand cmd = new SqlCommand("Select top 1 resexavg  from Tbl_Exams inner join Tbl_Students on Tbl_Exams.resstid=Tbl_Students.stid where stid=@p1 order by resexavg " + sortit, conn.conn());
             cmd.Parameters.AddWithValue("@p1", tempIdSt);
-            
+
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -85,6 +85,26 @@ namespace StudentRegisterSoftware
             fr.Show();
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmUserInformation fr = new frmUserInformation();
+            fr.TempId = tempIdSt;
+            SqlCommand cmd = new SqlCommand("Select stmobileno,stemail from Tbl_Students where stid=@p1", conn.conn());
+            cmd.Parameters.AddWithValue("@p1", tempIdSt);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                fr.tempMobno = dr[0].ToString();
+                fr.tempEmail = dr[1].ToString();
+            }
+            conn.conn().Close();
+           
+
+
+            fr.Show();
+
+        }
+
         private void btnLessFail_Click(object sender, EventArgs e)
         {
             FailPass("Failed");
@@ -99,7 +119,7 @@ namespace StudentRegisterSoftware
 
         private void frmStudentPage_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select (tcname+' '+tcsurname) as 'TEACHER', tcbrans as 'LESSONS', resexone as'EXAM 1', resextwo as'EXAM 2', resexthree as'EXAM 3', resexavg as'AVERAGE', resstatus as'STATUS' from Tbl_Exams \r\ninner join Tbl_Teachers\r\non Tbl_Exams.restcid=Tbl_Teachers.ntcid\r\ninner join Tbl_Students\r\non Tbl_Exams.resstid=Tbl_Students.stid where stid=@p1", conn.conn() );
+            SqlCommand cmd = new SqlCommand("select (tcname+' '+tcsurname) as 'TEACHER', tcbrans as 'LESSONS', resexone as'EXAM 1', resextwo as'EXAM 2', resexthree as'EXAM 3', resexavg as'AVERAGE', resstatus as'STATUS' from Tbl_Exams \r\ninner join Tbl_Teachers\r\non Tbl_Exams.restcid=Tbl_Teachers.ntcid\r\ninner join Tbl_Students\r\non Tbl_Exams.resstid=Tbl_Students.stid where stid=@p1", conn.conn());
             cmd.Parameters.AddWithValue("@p1", tempIdSt);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);

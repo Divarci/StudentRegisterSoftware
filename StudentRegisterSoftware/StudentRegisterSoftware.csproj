@@ -47,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdminInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminInformation.Designer.cs">
+      <DependentUpon>frmAdminInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacherInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherInformation.Designer.cs">
+      <DependentUpon>frmTeacherInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserInformation.Designer.cs">
+      <DependentUpon>frmUserInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +116,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sqlconnection.cs" />
+    <EmbeddedResource Include="frmAdminInformation.resx">
+      <DependentUpon>frmAdminInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherInformation.resx">
+      <DependentUpon>frmTeacherInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserInformation.resx">
+      <DependentUpon>frmUserInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminMessage.resx">
       <DependentUpon>frmAdminMessage.cs</DependentUpon>
     </EmbeddedResource>

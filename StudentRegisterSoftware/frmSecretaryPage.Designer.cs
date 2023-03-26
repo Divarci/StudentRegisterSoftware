@@ -125,6 +125,7 @@
             // 
             // pbSettings
             // 
+            this.pbSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSettings.Image = ((System.Drawing.Image)(resources.GetObject("pbSettings.Image")));
             this.pbSettings.Location = new System.Drawing.Point(401, 136);
             this.pbSettings.Name = "pbSettings";
@@ -132,6 +133,7 @@
             this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSettings.TabIndex = 7;
             this.pbSettings.TabStop = false;
+            this.pbSettings.Click += new System.EventHandler(this.pbSettings_Click);
             // 
             // pbInbox
             // 

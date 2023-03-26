@@ -176,6 +176,26 @@ namespace StudentRegisterSoftware
 
         }
 
+        private void pbSettings_Click(object sender, EventArgs e)
+        {
+            frmAdminInformation fr = new frmAdminInformation();
+
+            fr.TempId = tempIdAdm;
+            SqlCommand cmd = new SqlCommand("Select admmobileno,admemail from Tbl_Secretaries where admid=@p1", conn.conn());
+            cmd.Parameters.AddWithValue("@p1", tempIdAdm);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                fr.tempMobno = dr[0].ToString();
+                fr.tempEmail = dr[1].ToString();
+            }
+            conn.conn().Close();
+
+
+
+            fr.Show();
+        }
+
         private void btnTcSave_Click(object sender, EventArgs e)
         {
             SaveToGrid("Tbl_Teachers (tcusername, tcpass, tcname, tcsurname, tcbrans, tcemail, tcmobileno, tcorst)", mskTcUsername, txtTcPass, txtTcName, txtTcSurname, txtTcBrans, txtTcEmail, mskTcMobile, tempFrom);

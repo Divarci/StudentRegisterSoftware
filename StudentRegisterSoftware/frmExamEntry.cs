@@ -136,6 +136,26 @@ namespace StudentRegisterSoftware
 
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmTeacherInformation fr = new frmTeacherInformation();
+            
+            fr.TempId = temptcid;
+            SqlCommand cmd = new SqlCommand("Select tcmobileno,tcemail from Tbl_Teachers where ntcid=@p1", conn.conn());
+            cmd.Parameters.AddWithValue("@p1", temptcid);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                fr.tempMobno = dr[0].ToString();
+                fr.tempEmail = dr[1].ToString();
+            }
+            conn.conn().Close();
+
+
+
+            fr.Show();
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // update record
