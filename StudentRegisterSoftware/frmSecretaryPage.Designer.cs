@@ -367,11 +367,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(55, 232);
+            this.label8.Location = new System.Drawing.Point(12, 232);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 23);
+            this.label8.Size = new System.Drawing.Size(111, 23);
             this.label8.TabIndex = 25;
-            this.label8.Text = "Mobile:";
+            this.label8.Text = "(opt)Mobile:";
             // 
             // txtStName
             // 
@@ -455,11 +455,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(58, 232);
+            this.label10.Location = new System.Drawing.Point(16, 232);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 23);
+            this.label10.Size = new System.Drawing.Size(111, 23);
             this.label10.TabIndex = 22;
-            this.label10.Text = "Mobile:";
+            this.label10.Text = "(opt)Mobile:";
             // 
             // label11
             // 

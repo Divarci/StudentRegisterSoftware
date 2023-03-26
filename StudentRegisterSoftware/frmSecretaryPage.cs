@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace StudentRegisterSoftware
 {
@@ -26,6 +27,8 @@ namespace StudentRegisterSoftware
         public string tempUserName, tempPassword, tempName, tempSurname, tempEmail, tempMobile, tempClassBrans;
 
         public string tempUserNameAdm, tempNameAdm, tempSurnameAdm, tempIdAdm;
+
+       
 
         public void StudentClean()
         {
@@ -116,6 +119,7 @@ namespace StudentRegisterSoftware
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[0].Visible = false;
             // dataGridView1.Columns[5].Visible = false;
+            TempCashClean();
         }
 
         public void settings(bool tf1, bool tf2, bool tf3, bool tf4, bool tf5, Color c1, Color c2, Color c3, Color c4)
@@ -131,27 +135,88 @@ namespace StudentRegisterSoftware
             pnlSt.Enabled = tf5;
         }
 
-        
+
 
         private void btnStUpdate_Click(object sender, EventArgs e)
         {
-            updategrid("Update Tbl_Students set stusername=@p1,stpass=@p2, stname=@p3, stsurname=@p4, stclass=@p5, stemail = @p6, stmobileno=@p7  where stid=@p8", mskStUserName, txtStPass, txtStName, txtStSurname, txtClass, txtEmail, mskStMobile, tempId);
-            StudentClean();
-            ListItBaby("execute ListStudents ");
-            pnlTc.Enabled = true;
+            TextBox[] txtboxes = { txtStPass, txtStName, txtStSurname, txtEmail, txtClass };
+            MaskedTextBox[] mskboxes = { mskStUserName };
+            int a = 0, b = 0;
 
-            TempCashClean();
+
+            for (int i = 0; i < txtboxes.Length; i++)
+            {
+
+                if (txtboxes[i].Text == "" || txtboxes[i].Text == null || txtboxes[i].Text == string.Empty)
+                {
+                    a++;
+                }
+            }
+
+            for (int y = 0; y < mskboxes.Length; y++)
+            {
+                if (mskboxes[y].Text == "" || mskboxes[y].Text == null || mskboxes[y].Text == string.Empty)
+                {
+
+                    b++;
+                }
+            }
+
+            if (a > 0 || b > 0)
+            {
+                MessageBox.Show("Please Provide All informations", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                updategrid("Update Tbl_Students set stusername=@p1,stpass=@p2, stname=@p3, stsurname=@p4, stclass=@p5, stemail = @p6, stmobileno=@p7  where stid=@p8", mskStUserName, txtStPass, txtStName, txtStSurname, txtClass, txtEmail, mskStMobile, tempId);
+                StudentClean();
+                ListItBaby("execute ListStudents ");
+                pnlTc.Enabled = true;
+
+                TempCashClean();
+            }
 
         }
 
         private void btnTcUpdate_Click(object sender, EventArgs e)
         {
-            updategrid("Update Tbl_Teachers set tcusername=@p1,tcpass=@p2, tcname=@p3, tcsurname=@p4, tcbrans=@p5, tcemail = @p6, tcmobileno=@p7  where ntcid=@p8", mskTcUsername, txtTcPass, txtTcName, txtTcSurname, txtTcBrans, txtTcEmail, mskTcMobile, tempId);
-            TeacherClean();
-            ListItBaby("execute ListTeachers");
-            pnlSt.Enabled = true;
+            TextBox[] txtboxes = { txtTcPass, txtTcName, txtTcSurname, txtTcEmail, txtTcBrans };
+            MaskedTextBox[] mskboxes = { mskTcUsername };
 
-            TempCashClean();
+            int a = 0, b = 0;
+
+            for (int i = 0; i < txtboxes.Length; i++)
+            {
+
+                if (txtboxes[i].Text == "" || txtboxes[i].Text == null || txtboxes[i].Text == string.Empty)
+                {
+                    a++;
+                }
+            }
+
+            for (int y = 0; y < mskboxes.Length; y++)
+            {
+                if (mskboxes[y].Text == "" || mskboxes[y].Text == null || mskboxes[y].Text == string.Empty)
+                {
+
+                    b++;
+                }
+            }
+
+
+            if (a > 0 || b > 0)
+            {
+                MessageBox.Show("Please Provide All informations", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                updategrid("Update Tbl_Teachers set tcusername=@p1,tcpass=@p2, tcname=@p3, tcsurname=@p4, tcbrans=@p5, tcemail = @p6, tcmobileno=@p7  where ntcid=@p8", mskTcUsername, txtTcPass, txtTcName, txtTcSurname, txtTcBrans, txtTcEmail, mskTcMobile, tempId);
+                TeacherClean();
+                ListItBaby("execute ListTeachers");
+                pnlSt.Enabled = true;
+
+                TempCashClean();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -196,25 +261,90 @@ namespace StudentRegisterSoftware
             fr.Show();
         }
 
+
+
         private void btnTcSave_Click(object sender, EventArgs e)
         {
-            SaveToGrid("Tbl_Teachers (tcusername, tcpass, tcname, tcsurname, tcbrans, tcemail, tcmobileno, tcorst)", mskTcUsername, txtTcPass, txtTcName, txtTcSurname, txtTcBrans, txtTcEmail, mskTcMobile, tempFrom);
-            TeacherClean();
-            pnlSt.Enabled = true;
-            DeleteFromGrid("Tbl_RegisterRequest", "reqid", tempId);
-            switchId = 0;
-            ListItBaby("execute ListRequest ");
+            TextBox[] txtboxes = { txtTcPass, txtTcName, txtTcSurname, txtTcEmail, txtTcBrans };
+            MaskedTextBox[] mskboxes = { mskTcUsername };
+
+            int a = 0, b = 0;
+
+            for (int i = 0; i < txtboxes.Length; i++)
+            {
+
+                if (txtboxes[i].Text == "" || txtboxes[i].Text == null || txtboxes[i].Text == string.Empty)
+                {
+                    a++;
+                }
+            }
+
+            for (int y = 0; y < mskboxes.Length; y++)
+            {
+                if (mskboxes[y].Text == "" || mskboxes[y].Text == null || mskboxes[y].Text == string.Empty)
+                {
+
+                    b++;
+                }
+            }
+
+            if (a > 0 || b > 0)
+            {
+                MessageBox.Show("Please Provide All informations", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                SaveToGrid("Tbl_Teachers (tcusername, tcpass, tcname, tcsurname, tcbrans, tcemail, tcmobileno, tcorst)", mskTcUsername, txtTcPass, txtTcName, txtTcSurname, txtTcBrans, txtTcEmail, mskTcMobile, tempFrom);
+                TeacherClean();
+                pnlSt.Enabled = true;
+                DeleteFromGrid("Tbl_RegisterRequest", "reqid", tempId);
+                switchId = 0;
+                ListItBaby("execute ListRequest ");
+            }
         }
 
         private void btnStSave_Click(object sender, EventArgs e)
         {
-            SaveToGrid("Tbl_Students (stusername, stpass, stname, stsurname, stclass, stemail, stmobileno, stortc)", mskStUserName, txtStPass, txtStName, txtStSurname, txtClass, txtEmail, mskStMobile, tempFrom);
-            StudentClean();
-            pnlTc.Enabled = true;
-            DeleteFromGrid("Tbl_RegisterRequest", "reqid", tempId);
-            switchId = 0;
-            ListItBaby("execute ListRequest ");
-            TempCashClean();
+            TextBox[] txtboxes = { txtStPass, txtStName, txtStSurname, txtEmail, txtClass };
+            MaskedTextBox[] mskboxes = { mskStUserName };
+
+            int a = 0, b = 0;
+
+            for (int i = 0; i < txtboxes.Length; i++)
+            {
+
+                if (txtboxes[i].Text == "" || txtboxes[i].Text == null || txtboxes[i].Text == string.Empty)
+                {
+                    a++;
+                }
+            }
+
+            for (int y = 0; y < mskboxes.Length; y++)
+            {
+                if (mskboxes[y].Text == "" || mskboxes[y].Text == null || mskboxes[y].Text == string.Empty)
+                {
+
+                    b++;
+                }
+            }
+
+
+            if (a > 0 || b > 0)
+            {
+                MessageBox.Show("Please Provide All informations", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                SaveToGrid("Tbl_Students (stusername, stpass, stname, stsurname, stclass, stemail, stmobileno, stortc)", mskStUserName, txtStPass, txtStName, txtStSurname, txtClass, txtEmail, mskStMobile, tempFrom);
+                StudentClean();
+                pnlTc.Enabled = true;
+                DeleteFromGrid("Tbl_RegisterRequest", "reqid", tempId);
+                switchId = 0;
+                ListItBaby("execute ListRequest ");
+                TempCashClean();
+            }
+
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -363,13 +493,17 @@ namespace StudentRegisterSoftware
 
             dataGridView1.BackgroundColor = Color.PaleTurquoise;
             dataGridView1.DefaultCellStyle.BackColor = Color.PaleTurquoise;
+
+
         }
 
         private void frmSecretaryPage_Load(object sender, EventArgs e)
         {
             lblAdmNameSurname.Text = tempNameAdm + " " + tempSurnameAdm;
             TempCashClean();
-            
+
+
+
         }
     }
 }

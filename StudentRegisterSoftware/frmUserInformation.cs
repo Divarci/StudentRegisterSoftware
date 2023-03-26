@@ -28,14 +28,22 @@ namespace StudentRegisterSoftware
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("Update Tbl_Students set stmobileno=@p1,stemail=@p2 where stid=@p3", conn.conn());
-            cmd.Parameters.AddWithValue("@p1", mskMobno.Text);
-            cmd.Parameters.AddWithValue("@p2", txtEmail.Text);
-            cmd.Parameters.AddWithValue("@p3", TempId);
-            cmd.ExecuteNonQuery();
-            conn.conn().Close();
+            if (txtEmail.Text == null || txtEmail.Text == "" || txtEmail.Text == string.Empty)
+            {
 
-            MessageBox.Show("Your Information has been UPDATED","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Please Provide an E-Mail address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                SqlCommand cmd = new SqlCommand("Update Tbl_Students set stmobileno=@p1,stemail=@p2 where stid=@p3", conn.conn());
+                cmd.Parameters.AddWithValue("@p1", mskMobno.Text);
+                cmd.Parameters.AddWithValue("@p2", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@p3", TempId);
+                cmd.ExecuteNonQuery();
+                conn.conn().Close();
+
+                MessageBox.Show("Your Information has been UPDATED", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void frmUserInformation_Load(object sender, EventArgs e)

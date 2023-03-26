@@ -159,100 +159,135 @@ namespace StudentRegisterSoftware
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // update record
+            MaskedTextBox[] exams = { mskex1, mskex2, mskex3 };
 
-            if (restcid == temptcid)
+            int a = 0;
+
+            for (int i = 0; i < exams.Length; i++)
             {
-                AvarageCalvulation();
 
-                SqlCommand cmd = new SqlCommand("update Tbl_Exams set resexone=@p1, resextwo=@p2, resexthree=@p3, resexavg=@p4, resstatus=@p5 where resid=@p6 and restcid=@p7", conn.conn());
-                cmd.Parameters.AddWithValue("@p1", mskex1.Text);
-                cmd.Parameters.AddWithValue("@p2", mskex2.Text);
-                cmd.Parameters.AddWithValue("@p3", mskex3.Text);
-                cmd.Parameters.AddWithValue("@p4", avg);
-                if (avg < 45)
+                if (exams[i].Text == "" || exams[i].Text == null || exams[i].Text == string.Empty)
                 {
-                    cmd.Parameters.AddWithValue("@p5", "Failed");
+                    a++;
                 }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@p5", "Passed");
-                }
-
-                cmd.Parameters.AddWithValue("@p6", selectedIndex);
-                cmd.Parameters.AddWithValue("@p7", Convert.ToInt16(temptcid));
-
-                cmd.ExecuteNonQuery();
-                conn.conn().Close();
-
-                MessageBox.Show("Exam Results are UPDATED?", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                ExamResultClear();
-
-                ListViaIndexChange("stid=@p1", cmbStudent);
-
-
-                btnSave.Enabled = true;
-                btnSave.BackColor = Color.White;
+            }
+            if (a > 0)
+            {
+                MessageBox.Show("Please Provide All informations", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("You can only change exam results belong to you", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                if (restcid == temptcid)
+                {
+                    AvarageCalvulation();
 
+                    SqlCommand cmd = new SqlCommand("update Tbl_Exams set resexone=@p1, resextwo=@p2, resexthree=@p3, resexavg=@p4, resstatus=@p5 where resid=@p6 and restcid=@p7", conn.conn());
+                    cmd.Parameters.AddWithValue("@p1", mskex1.Text);
+                    cmd.Parameters.AddWithValue("@p2", mskex2.Text);
+                    cmd.Parameters.AddWithValue("@p3", mskex3.Text);
+                    cmd.Parameters.AddWithValue("@p4", avg);
+                    if (avg < 45)
+                    {
+                        cmd.Parameters.AddWithValue("@p5", "Failed");
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@p5", "Passed");
+                    }
+
+                    cmd.Parameters.AddWithValue("@p6", selectedIndex);
+                    cmd.Parameters.AddWithValue("@p7", Convert.ToInt16(temptcid));
+
+                    cmd.ExecuteNonQuery();
+                    conn.conn().Close();
+
+                    MessageBox.Show("Exam Results are UPDATED?", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    ExamResultClear();
+
+                    ListViaIndexChange("stid=@p1", cmbStudent);
+
+
+                    btnSave.Enabled = true;
+                    btnSave.BackColor = Color.White;
+                }
+                else
+                {
+                    MessageBox.Show("You can only change exam results belong to you", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             // exam record
-            int tempvalue = 0;
+            MaskedTextBox[] exams = { mskex1, mskex2, mskex3 };
 
-            SqlCommand cmdselect = new SqlCommand("Select Count (*) from Tbl_Exams where resstid=@p1 and restcid=@p2 ", conn.conn());
-            cmdselect.Parameters.AddWithValue("@p1", cmbStudent.SelectedValue);
-            cmdselect.Parameters.AddWithValue("@p2", temptcid);
-            SqlDataReader dr = cmdselect.ExecuteReader();
-            while (dr.Read())
+            int a = 0;
+
+            for (int i = 0; i < exams.Length; i++)
             {
 
-                tempvalue = Convert.ToInt16(dr[0].ToString());
-
+                if (exams[i].Text == "" || exams[i].Text == null || exams[i].Text == string.Empty)
+                {
+                    a++;
+                }
             }
-            if(tempvalue == 0)
+            if (a > 0)
             {
-                AvarageCalvulation();
-
-                SqlCommand cmd = new SqlCommand("Insert into Tbl_Exams (resstid,restcid,resexone,resextwo,resexthree,resexavg,resstatus) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", conn.conn());
-                cmd.Parameters.AddWithValue("@p1", cmbStudent.SelectedValue);
-                cmd.Parameters.AddWithValue("@p2", temptcid);
-                cmd.Parameters.AddWithValue("@p3", mskex1.Text);
-                cmd.Parameters.AddWithValue("@p4", mskex2.Text);
-                cmd.Parameters.AddWithValue("@p5", mskex3.Text);
-                cmd.Parameters.AddWithValue("@p6", avg);
-                if (avg < 45)
-                {
-                    cmd.Parameters.AddWithValue("@p7", "Failed");
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@p7", "Passed");
-                }
-                cmd.ExecuteNonQuery();
-                conn.conn().Close();
-
-                MessageBox.Show("Exam Results are Created?", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                ExamResultClear();
-                ListViaIndexChange("stid=@p1", cmbStudent);
-                selectedIndex = "";
+                MessageBox.Show("Please Provide All informations", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("You have already assigned Exam Results for this student.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int tempvalue = 0;
+
+                SqlCommand cmdselect = new SqlCommand("Select Count (*) from Tbl_Exams where resstid=@p1 and restcid=@p2 ", conn.conn());
+                cmdselect.Parameters.AddWithValue("@p1", cmbStudent.SelectedValue);
+                cmdselect.Parameters.AddWithValue("@p2", temptcid);
+                SqlDataReader dr = cmdselect.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    tempvalue = Convert.ToInt16(dr[0].ToString());
+
+                }
+                if (tempvalue == 0)
+                {
+                    AvarageCalvulation();
+
+                    SqlCommand cmd = new SqlCommand("Insert into Tbl_Exams (resstid,restcid,resexone,resextwo,resexthree,resexavg,resstatus) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", conn.conn());
+                    cmd.Parameters.AddWithValue("@p1", cmbStudent.SelectedValue);
+                    cmd.Parameters.AddWithValue("@p2", temptcid);
+                    cmd.Parameters.AddWithValue("@p3", mskex1.Text);
+                    cmd.Parameters.AddWithValue("@p4", mskex2.Text);
+                    cmd.Parameters.AddWithValue("@p5", mskex3.Text);
+                    cmd.Parameters.AddWithValue("@p6", avg);
+                    if (avg < 45)
+                    {
+                        cmd.Parameters.AddWithValue("@p7", "Failed");
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@p7", "Passed");
+                    }
+                    cmd.ExecuteNonQuery();
+                    conn.conn().Close();
+
+                    MessageBox.Show("Exam Results are Created?", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    ExamResultClear();
+                    ListViaIndexChange("stid=@p1", cmbStudent);
+                    selectedIndex = "";
+                }
+                else
+                {
+                    MessageBox.Show("You have already assigned Exam Results for this student.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
 
             }
-
-
 
         }
 

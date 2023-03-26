@@ -75,7 +75,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(31, 65);
+            this.label2.Location = new System.Drawing.Point(79, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 23);
             this.label2.TabIndex = 14;
@@ -87,9 +87,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(31, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.Size = new System.Drawing.Size(124, 23);
             this.label1.TabIndex = 12;
-            this.label1.Text = "MOBILE NO:";
+            this.label1.Text = "(opt)MOBILE:";
             // 
             // txtEmail
             // 
@@ -114,7 +114,7 @@
             this.Controls.Add(this.txtEmail);
             this.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmAdminInformation";
             this.Text = "ADMIN INFORMATION";

@@ -41,7 +41,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(154, 139);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 30);
@@ -75,7 +75,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(31, 65);
+            this.label2.Location = new System.Drawing.Point(69, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 23);
             this.label2.TabIndex = 8;
@@ -85,11 +85,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 25);
+            this.label1.Location = new System.Drawing.Point(22, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.Size = new System.Drawing.Size(124, 23);
             this.label1.TabIndex = 6;
-            this.label1.Text = "MOBILE NO:";
+            this.label1.Text = "(opt)MOBILE:";
             // 
             // txtEmail
             // 
@@ -114,7 +114,7 @@
             this.Controls.Add(this.txtEmail);
             this.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmTeacherInformation";
             this.Text = "frmTeacherInformation";
