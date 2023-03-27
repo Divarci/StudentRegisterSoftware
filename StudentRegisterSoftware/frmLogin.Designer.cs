@@ -34,8 +34,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.pbEyeSt = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.cb1 = new System.Windows.Forms.CheckBox();
+            this.btnSI = new System.Windows.Forms.Button();
             this.llSU = new System.Windows.Forms.LinkLabel();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.mskId = new System.Windows.Forms.MaskedTextBox();
@@ -44,10 +46,10 @@
             this.btnTc = new System.Windows.Forms.Button();
             this.btnSt = new System.Windows.Forms.Button();
             this.btnAdm = new System.Windows.Forms.Button();
-            this.btnSI = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEyeSt)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -94,6 +96,7 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.Controls.Add(this.pbEyeSt);
             this.pnlLogin.Controls.Add(this.btnExit);
             this.pnlLogin.Controls.Add(this.cb1);
             this.pnlLogin.Controls.Add(this.btnSI);
@@ -106,6 +109,19 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(418, 149);
             this.pnlLogin.TabIndex = 21;
+            // 
+            // pbEyeSt
+            // 
+            this.pbEyeSt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbEyeSt.Image = ((System.Drawing.Image)(resources.GetObject("pbEyeSt.Image")));
+            this.pbEyeSt.Location = new System.Drawing.Point(326, 48);
+            this.pbEyeSt.Name = "pbEyeSt";
+            this.pbEyeSt.Size = new System.Drawing.Size(28, 23);
+            this.pbEyeSt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbEyeSt.TabIndex = 23;
+            this.pbEyeSt.TabStop = false;
+            this.pbEyeSt.MouseLeave += new System.EventHandler(this.pbEyeSt_MouseLeave);
+            this.pbEyeSt.MouseHover += new System.EventHandler(this.pbEyeSt_MouseHover);
             // 
             // btnExit
             // 
@@ -134,11 +150,25 @@
             this.cb1.Text = "I am human";
             this.cb1.UseVisualStyleBackColor = true;
             // 
+            // btnSI
+            // 
+            this.btnSI.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSI.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSI.ForeColor = System.Drawing.Color.White;
+            this.btnSI.Location = new System.Drawing.Point(142, 112);
+            this.btnSI.Name = "btnSI";
+            this.btnSI.Size = new System.Drawing.Size(84, 30);
+            this.btnSI.TabIndex = 18;
+            this.btnSI.Text = "SIGN IN";
+            this.btnSI.UseVisualStyleBackColor = false;
+            this.btnSI.Click += new System.EventHandler(this.btnSI_Click_1);
+            // 
             // llSU
             // 
             this.llSU.AutoSize = true;
             this.llSU.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llSU.Location = new System.Drawing.Point(326, 49);
+            this.llSU.Location = new System.Drawing.Point(3, 123);
             this.llSU.Name = "llSU";
             this.llSU.Size = new System.Drawing.Size(70, 19);
             this.llSU.TabIndex = 20;
@@ -229,20 +259,6 @@
             this.btnAdm.UseVisualStyleBackColor = false;
             this.btnAdm.Click += new System.EventHandler(this.btnAdm_Click);
             // 
-            // btnSI
-            // 
-            this.btnSI.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnSI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSI.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSI.ForeColor = System.Drawing.Color.White;
-            this.btnSI.Location = new System.Drawing.Point(142, 112);
-            this.btnSI.Name = "btnSI";
-            this.btnSI.Size = new System.Drawing.Size(84, 30);
-            this.btnSI.TabIndex = 18;
-            this.btnSI.Text = "SIGN IN";
-            this.btnSI.UseVisualStyleBackColor = false;
-            this.btnSI.Click += new System.EventHandler(this.btnSI_Click_1);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -269,6 +285,7 @@
             this.panel1.PerformLayout();
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEyeSt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -291,5 +308,6 @@
         private System.Windows.Forms.Button btnSt;
         private System.Windows.Forms.Button btnAdm;
         private System.Windows.Forms.Button btnSI;
+        private System.Windows.Forms.PictureBox pbEyeSt;
     }
 }

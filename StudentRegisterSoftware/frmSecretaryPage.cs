@@ -75,9 +75,13 @@ namespace StudentRegisterSoftware
 
         public void updategrid(string query, MaskedTextBox UN, TextBox Pass, TextBox name, TextBox surname, TextBox classbrans, TextBox email, MaskedTextBox mobile, string stortc)
         {
+            byte[] dtrry = ASCIIEncoding.ASCII.GetBytes(Pass.Text);
+            string passdtst = Convert.ToBase64String(dtrry);
+
+
             SqlCommand cmd = new SqlCommand(query, conn.conn());
             cmd.Parameters.AddWithValue("@p1", UN.Text);
-            cmd.Parameters.AddWithValue("@p2", Pass.Text);
+            cmd.Parameters.AddWithValue("@p2", passdtst);
             cmd.Parameters.AddWithValue("@p3", name.Text);
             cmd.Parameters.AddWithValue("@p4", surname.Text);
             cmd.Parameters.AddWithValue("@p5", classbrans.Text);
@@ -94,9 +98,12 @@ namespace StudentRegisterSoftware
 
         public void SaveToGrid(string query, MaskedTextBox UN, TextBox Pass, TextBox name, TextBox surname, TextBox classs, TextBox email, MaskedTextBox mobile, string stortc)
         {
+            byte[] dtrry = ASCIIEncoding.ASCII.GetBytes(Pass.Text);
+            string passdtst = Convert.ToBase64String(dtrry);
+
             SqlCommand cmd = new SqlCommand("Insert into " + query + " values (@p1, @p2, @p3, @p4, @p5, @p6, @p7,@p8)", conn.conn());
             cmd.Parameters.AddWithValue("@p1", UN.Text);
-            cmd.Parameters.AddWithValue("@p2", Pass.Text);
+            cmd.Parameters.AddWithValue("@p2", passdtst);
             cmd.Parameters.AddWithValue("@p3", name.Text);
             cmd.Parameters.AddWithValue("@p4", surname.Text);
             cmd.Parameters.AddWithValue("@p5", classs.Text);
@@ -335,6 +342,8 @@ namespace StudentRegisterSoftware
             }
             else
             {
+
+
                 SaveToGrid("Tbl_Students (stusername, stpass, stname, stsurname, stclass, stemail, stmobileno, stortc)", mskStUserName, txtStPass, txtStName, txtStSurname, txtClass, txtEmail, mskStMobile, tempFrom);
                 StudentClean();
                 pnlTc.Enabled = true;
@@ -417,10 +426,14 @@ namespace StudentRegisterSoftware
             {
                 if (tempFrom == "Student")
                 {
+                    byte[] encode = Convert.FromBase64String(tempPassword);
+                    string passnew = ASCIIEncoding.ASCII.GetString(encode);
+
+
                     pnlSt.Enabled = true;
 
                     mskStUserName.Text = tempUserName;
-                    txtStPass.Text = tempPassword;
+                    txtStPass.Text = passnew;
                     txtStName.Text = tempName;
                     txtStSurname.Text = tempSurname;
                     txtClass.Text = tempClassBrans;
@@ -432,10 +445,13 @@ namespace StudentRegisterSoftware
                 }
                 else if (tempFrom == "Teacher")
                 {
+                    byte[] encode = Convert.FromBase64String(tempPassword);
+                    string passnew = ASCIIEncoding.ASCII.GetString(encode);
+
                     pnlTc.Enabled = true;
 
                     mskTcUsername.Text = tempUserName;
-                    txtTcPass.Text = tempPassword;
+                    txtTcPass.Text = passnew;
                     txtTcName.Text = tempName;
                     txtTcSurname.Text = tempSurname;
                     txtTcBrans.Text = tempClassBrans;
@@ -483,6 +499,7 @@ namespace StudentRegisterSoftware
 
         private void btnReqList_Click(object sender, EventArgs e)
         {
+
             switchId = 0;
             ListItBaby("execute ListRequest ");
             settings(false, false, true, true, true, Color.LightGray, Color.White, Color.White, Color.LightGray);

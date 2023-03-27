@@ -63,14 +63,17 @@ namespace StudentRegisterSoftware
                 if (btnTc.BackColor == Color.SeaGreen && btnAdm.BackColor == Color.LightGray && btnSt.BackColor == Color.LightGray)
                 {
 
+                    byte[] code = ASCIIEncoding.ASCII.GetBytes(txtPass.Text);
+                    string coded = Convert.ToBase64String(code);
+
                     SqlCommand cmd2 = new SqlCommand("Select tcusername,tcpass,tcName,tcSurname,ntcid from Tbl_Teachers where tcusername=@p1 and tcpass=@p2", conn.conn());
                     cmd2.Parameters.AddWithValue("@p1", mskId.Text);
-                    cmd2.Parameters.AddWithValue("@p2", txtPass.Text);
+                    cmd2.Parameters.AddWithValue("@p2", coded);
                     SqlDataReader dr2 = cmd2.ExecuteReader();
                     if (dr2.Read())
                     {
                         mskId.Text = dr2[0].ToString();
-                        txtPass.Text = dr2[1].ToString();
+                        coded = dr2[1].ToString();
 
                         frmExamEntry fr = new frmExamEntry();
                         fr.tempUserName = dr2[0].ToString();
@@ -93,14 +96,19 @@ namespace StudentRegisterSoftware
                 }
                 else if (btnAdm.BackColor == Color.Crimson && btnTc.BackColor == Color.LightGray && btnSt.BackColor == Color.LightGray)
                 {
+
+
+                    byte[] code = ASCIIEncoding.ASCII.GetBytes(txtPass.Text);
+                    string coded = Convert.ToBase64String(code);
+
                     SqlCommand cmd3 = new SqlCommand("Select admusername,admpass,admname,admsurname,admid from Tbl_Secretaries where admusername=@p1 and admpass=@p2", conn.conn());
                     cmd3.Parameters.AddWithValue("@p1", mskId.Text);
-                    cmd3.Parameters.AddWithValue("@p2", txtPass.Text);
+                    cmd3.Parameters.AddWithValue("@p2", coded);
                     SqlDataReader dr3 = cmd3.ExecuteReader();
                     if (dr3.Read())
                     {
                         mskId.Text = dr3[0].ToString();
-                        txtPass.Text = dr3[1].ToString();
+                        coded = dr3[1].ToString();
 
                         frmSecretaryPage fr = new frmSecretaryPage();
                         fr.tempUserNameAdm = dr3[0].ToString();
@@ -122,14 +130,19 @@ namespace StudentRegisterSoftware
                 }
                 else if (btnSt.BackColor == Color.DarkCyan && btnAdm.BackColor == Color.LightGray && btnTc.BackColor == Color.LightGray)
                 {
+
+
+                    byte[] code = ASCIIEncoding.ASCII.GetBytes(txtPass.Text);
+                    string coded = Convert.ToBase64String(code);
+
                     SqlCommand cmd = new SqlCommand("Select stusername,stpass,stname,stsurname,stid from Tbl_Students where stusername=@p1 and stpass=@p2", conn.conn());
                     cmd.Parameters.AddWithValue("@p1", mskId.Text);
-                    cmd.Parameters.AddWithValue("@p2", txtPass.Text);
+                    cmd.Parameters.AddWithValue("@p2", coded);
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
                         mskId.Text = dr[0].ToString();
-                        txtPass.Text = dr[1].ToString();
+                        coded = dr[1].ToString();
 
                         frmStudentPage fr = new frmStudentPage();
                         fr.tempUserNameSt = dr[0].ToString();
@@ -177,6 +190,16 @@ namespace StudentRegisterSoftware
         {
             frmSignUp fr = new frmSignUp();
             fr.Show();
+        }
+
+        private void pbEyeSt_MouseHover(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = false;
+        }
+
+        private void pbEyeSt_MouseLeave(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar=true;
         }
     }
 }

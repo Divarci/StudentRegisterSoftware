@@ -24,10 +24,15 @@ namespace StudentRegisterSoftware
 
         public void SendMessage(string From, MaskedTextBox UN, TextBox Pass, TextBox Name, TextBox Surname, TextBox Class, TextBox Email, MaskedTextBox Mobile)
         {
+            
+            byte[] dtrry=ASCIIEncoding.ASCII.GetBytes(Pass.Text);
+            string passdtst = Convert.ToBase64String(dtrry);
+
+
             SqlCommand cmd = new SqlCommand("Insert into Tbl_RegisterRequest (reqfrom,requsername,reqpass,reqname,reqsurname,reqclassbrans,reqemail,reqmobile) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", conn.conn());
             cmd.Parameters.AddWithValue("@p1", From);
             cmd.Parameters.AddWithValue("@p2", UN.Text);
-            cmd.Parameters.AddWithValue("@p3", Pass.Text);
+            cmd.Parameters.AddWithValue("@p3", passdtst);
             cmd.Parameters.AddWithValue("@p4", Name.Text);
             cmd.Parameters.AddWithValue("@p5", Surname.Text);
             cmd.Parameters.AddWithValue("@p6", Class.Text);
@@ -188,6 +193,26 @@ namespace StudentRegisterSoftware
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pbEyeSt_MouseHover(object sender, EventArgs e)
+        {
+            txtStPass.UseSystemPasswordChar = false;
+        }
+
+        private void pbEyeSt_MouseLeave(object sender, EventArgs e)
+        {
+            txtStPass.UseSystemPasswordChar = true;
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            txtTcPass.UseSystemPasswordChar = false;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            txtTcPass.UseSystemPasswordChar = true;
         }
     }
 }
