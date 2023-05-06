@@ -17,6 +17,8 @@ namespace StudentRegisterSoftware
         {
             InitializeComponent();
         }
+
+        //avg calculation
         public void AvarageCalvulation()
         {
             int x, y, z;
@@ -26,7 +28,7 @@ namespace StudentRegisterSoftware
 
             avg = (x + y + z) / 3;
         }
-
+        //list method
         public void ListViaIndexChange(string condition, ComboBox cmb)
         {
             SqlCommand cmd2 = new SqlCommand("select resid,(stname+' '+stsurname) as 'STUDENT NAME', (tcname+' '+tcsurname) as 'TEACHER NAME',tcbrans as 'LESSON', resexone as 'EXAM 1', resextwo as 'EXAM 2', resexthree as 'EXAM 3', resexavg as 'EXAM AVERAGE',resstatus as 'STATUS', restcid from Tbl_Exams \r\ninner join Tbl_Students\r\non Tbl_Exams.resstid = Tbl_Students.stid\r\ninner join Tbl_Teachers\r\non Tbl_Exams.restcid = Tbl_Teachers.Ntcid where " + condition, conn.conn());
@@ -38,7 +40,7 @@ namespace StudentRegisterSoftware
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[9].Visible = false;
         }
-
+        //clear methoe
         public void ExamResultClear()
         {
 
@@ -47,9 +49,10 @@ namespace StudentRegisterSoftware
             mskex3.Text = "";
             selectedIndex = "";
         }
-
+        //sql connection
         sqlconnection conn = new sqlconnection();
 
+        //temporary values
         public string tempUserName, tempName, tempSurname, temptcid;
         string selectedIndex, examone, examtwo, examthree;
         int avg;
@@ -58,12 +61,10 @@ namespace StudentRegisterSoftware
 
         private void deleteDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // delete with right click menu
-
+            //if there is a selection
             if (selectedIndex != "")
             {
-
-
+                //delete works with onlt data belongs to teacher who is loged in
                 if (restcid == temptcid)
                 {
                     DialogResult result = new DialogResult();
@@ -95,12 +96,10 @@ namespace StudentRegisterSoftware
 
         private void copyToBoardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-
-            // condition seetings for update
+            //if there is a selection
             if (selectedIndex != "")
             {
-
+                //button settings before update
                 btnUpdate.Enabled = true;
                 btnSave.Enabled = false;
                 btnSave.BackColor = Color.LightGray;
@@ -119,6 +118,7 @@ namespace StudentRegisterSoftware
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            //exit app
             frmLogin fr = new frmLogin();
             fr.Show();
             this.Close();
@@ -126,6 +126,7 @@ namespace StudentRegisterSoftware
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            //leads you to message page
             frmTeacherMessage fr = new frmTeacherMessage();
             fr.tempName = tempName;
             fr.tempSurname = tempSurname;
@@ -138,8 +139,9 @@ namespace StudentRegisterSoftware
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            //leads you to teacher info
             frmTeacherInformation fr = new frmTeacherInformation();
-            
+
             fr.TempId = temptcid;
             SqlCommand cmd = new SqlCommand("Select tcmobileno,tcemail from Tbl_Teachers where ntcid=@p1", conn.conn());
             cmd.Parameters.AddWithValue("@p1", temptcid);
@@ -156,22 +158,23 @@ namespace StudentRegisterSoftware
             fr.Show();
         }
 
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            // update record
+            // same steps with the other saving methods
             MaskedTextBox[] exams = { mskex1, mskex2, mskex3 };
 
-            int a = 0;
+            int txtBoxControl = 0;
 
             for (int i = 0; i < exams.Length; i++)
             {
 
                 if (exams[i].Text == "" || exams[i].Text == null || exams[i].Text == string.Empty)
                 {
-                    a++;
+                    txtBoxControl++;
                 }
             }
-            if (a > 0)
+            if (txtBoxControl > 0)
             {
                 MessageBox.Show("Please Provide All informations", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -221,7 +224,7 @@ namespace StudentRegisterSoftware
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // exam record
+            // same steps with the other update methods
             MaskedTextBox[] exams = { mskex1, mskex2, mskex3 };
 
             int a = 0;

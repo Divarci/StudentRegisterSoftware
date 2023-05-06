@@ -82,8 +82,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblAdmNameSurname = new System.Windows.Forms.Label();
             this.btnReqList = new System.Windows.Forms.Button();
@@ -108,7 +106,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(412, 238);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 19);
+            this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "SETTINGS";
             // 
@@ -119,7 +117,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(420, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 19);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "INBOX";
             // 
@@ -179,7 +177,7 @@
             this.txtStPass.Location = new System.Drawing.Point(127, 55);
             this.txtStPass.MaxLength = 12;
             this.txtStPass.Name = "txtStPass";
-            this.txtStPass.Size = new System.Drawing.Size(189, 29);
+            this.txtStPass.Size = new System.Drawing.Size(189, 25);
             this.txtStPass.TabIndex = 1;
             // 
             // btnStList
@@ -202,7 +200,7 @@
             this.mskStMobile.Location = new System.Drawing.Point(127, 230);
             this.mskStMobile.Mask = "(99999) 000-000";
             this.mskStMobile.Name = "mskStMobile";
-            this.mskStMobile.Size = new System.Drawing.Size(189, 29);
+            this.mskStMobile.Size = new System.Drawing.Size(189, 25);
             this.mskStMobile.TabIndex = 6;
             // 
             // btnStUpdate
@@ -262,7 +260,7 @@
             this.lblStudent.ForeColor = System.Drawing.Color.White;
             this.lblStudent.Location = new System.Drawing.Point(4, 15);
             this.lblStudent.Name = "lblStudent";
-            this.lblStudent.Size = new System.Drawing.Size(153, 19);
+            this.lblStudent.Size = new System.Drawing.Size(127, 16);
             this.lblStudent.TabIndex = 0;
             this.lblStudent.Text = "STUDENT REGISTER";
             // 
@@ -272,7 +270,7 @@
             this.mskStUserName.Location = new System.Drawing.Point(127, 20);
             this.mskStUserName.Mask = "000000000000";
             this.mskStUserName.Name = "mskStUserName";
-            this.mskStUserName.Size = new System.Drawing.Size(189, 29);
+            this.mskStUserName.Size = new System.Drawing.Size(189, 25);
             this.mskStUserName.TabIndex = 0;
             this.mskStUserName.ValidatingType = typeof(int);
             // 
@@ -282,7 +280,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(58, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 23);
+            this.label1.Size = new System.Drawing.Size(53, 18);
             this.label1.TabIndex = 17;
             this.label1.Text = "Name:";
             // 
@@ -292,7 +290,7 @@
             this.txtEmail.Location = new System.Drawing.Point(127, 195);
             this.txtEmail.MaxLength = 40;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(189, 29);
+            this.txtEmail.Size = new System.Drawing.Size(189, 25);
             this.txtEmail.TabIndex = 5;
             // 
             // label2
@@ -301,7 +299,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(31, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 23);
+            this.label2.Size = new System.Drawing.Size(76, 18);
             this.label2.TabIndex = 15;
             this.label2.Text = "Password:";
             // 
@@ -311,7 +309,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(35, 128);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 23);
+            this.label5.Size = new System.Drawing.Size(70, 18);
             this.label5.TabIndex = 19;
             this.label5.Text = "Surname:";
             // 
@@ -321,7 +319,7 @@
             this.txtClass.Location = new System.Drawing.Point(127, 160);
             this.txtClass.MaxLength = 5;
             this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(189, 29);
+            this.txtClass.Size = new System.Drawing.Size(189, 25);
             this.txtClass.TabIndex = 4;
             // 
             // label9
@@ -330,7 +328,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(17, 22);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 23);
+            this.label9.Size = new System.Drawing.Size(86, 18);
             this.label9.TabIndex = 13;
             this.label9.Text = "User Name:";
             // 
@@ -340,7 +338,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(70, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 23);
+            this.label6.Size = new System.Drawing.Size(43, 18);
             this.label6.TabIndex = 21;
             this.label6.Text = "Class:";
             // 
@@ -350,7 +348,7 @@
             this.txtStSurname.Location = new System.Drawing.Point(127, 125);
             this.txtStSurname.MaxLength = 20;
             this.txtStSurname.Name = "txtStSurname";
-            this.txtStSurname.Size = new System.Drawing.Size(189, 29);
+            this.txtStSurname.Size = new System.Drawing.Size(189, 25);
             this.txtStSurname.TabIndex = 3;
             // 
             // label7
@@ -359,7 +357,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(54, 198);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 23);
+            this.label7.Size = new System.Drawing.Size(55, 18);
             this.label7.TabIndex = 23;
             this.label7.Text = "E-mail:";
             // 
@@ -369,7 +367,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(12, 232);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 23);
+            this.label8.Size = new System.Drawing.Size(88, 18);
             this.label8.TabIndex = 25;
             this.label8.Text = "(opt)Mobile:";
             // 
@@ -379,7 +377,7 @@
             this.txtStName.Location = new System.Drawing.Point(127, 90);
             this.txtStName.MaxLength = 20;
             this.txtStName.Name = "txtStName";
-            this.txtStName.Size = new System.Drawing.Size(189, 29);
+            this.txtStName.Size = new System.Drawing.Size(189, 25);
             this.txtStName.TabIndex = 2;
             // 
             // btnExit
@@ -402,7 +400,7 @@
             this.mskTcMobile.Location = new System.Drawing.Point(130, 230);
             this.mskTcMobile.Mask = "(99999) 000-000";
             this.mskTcMobile.Name = "mskTcMobile";
-            this.mskTcMobile.Size = new System.Drawing.Size(189, 29);
+            this.mskTcMobile.Size = new System.Drawing.Size(189, 25);
             this.mskTcMobile.TabIndex = 16;
             // 
             // mskTcUsername
@@ -411,7 +409,7 @@
             this.mskTcUsername.Location = new System.Drawing.Point(130, 20);
             this.mskTcUsername.Mask = "000000000000";
             this.mskTcUsername.Name = "mskTcUsername";
-            this.mskTcUsername.Size = new System.Drawing.Size(189, 29);
+            this.mskTcUsername.Size = new System.Drawing.Size(189, 25);
             this.mskTcUsername.TabIndex = 10;
             this.mskTcUsername.ValidatingType = typeof(int);
             // 
@@ -421,7 +419,7 @@
             this.txtTcEmail.Location = new System.Drawing.Point(130, 195);
             this.txtTcEmail.MaxLength = 40;
             this.txtTcEmail.Name = "txtTcEmail";
-            this.txtTcEmail.Size = new System.Drawing.Size(189, 29);
+            this.txtTcEmail.Size = new System.Drawing.Size(189, 25);
             this.txtTcEmail.TabIndex = 15;
             // 
             // txtTcBrans
@@ -430,7 +428,7 @@
             this.txtTcBrans.Location = new System.Drawing.Point(130, 160);
             this.txtTcBrans.MaxLength = 12;
             this.txtTcBrans.Name = "txtTcBrans";
-            this.txtTcBrans.Size = new System.Drawing.Size(189, 29);
+            this.txtTcBrans.Size = new System.Drawing.Size(189, 25);
             this.txtTcBrans.TabIndex = 14;
             // 
             // txtTcSurname
@@ -439,7 +437,7 @@
             this.txtTcSurname.Location = new System.Drawing.Point(130, 125);
             this.txtTcSurname.MaxLength = 20;
             this.txtTcSurname.Name = "txtTcSurname";
-            this.txtTcSurname.Size = new System.Drawing.Size(189, 29);
+            this.txtTcSurname.Size = new System.Drawing.Size(189, 25);
             this.txtTcSurname.TabIndex = 13;
             // 
             // txtTcName
@@ -448,7 +446,7 @@
             this.txtTcName.Location = new System.Drawing.Point(130, 90);
             this.txtTcName.MaxLength = 20;
             this.txtTcName.Name = "txtTcName";
-            this.txtTcName.Size = new System.Drawing.Size(189, 29);
+            this.txtTcName.Size = new System.Drawing.Size(189, 25);
             this.txtTcName.TabIndex = 12;
             // 
             // label10
@@ -457,7 +455,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(16, 232);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 23);
+            this.label10.Size = new System.Drawing.Size(88, 18);
             this.label10.TabIndex = 22;
             this.label10.Text = "(opt)Mobile:";
             // 
@@ -467,7 +465,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(58, 198);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 23);
+            this.label11.Size = new System.Drawing.Size(55, 18);
             this.label11.TabIndex = 21;
             this.label11.Text = "E-mail:";
             // 
@@ -477,7 +475,7 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(65, 162);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 23);
+            this.label12.Size = new System.Drawing.Size(49, 18);
             this.label12.TabIndex = 20;
             this.label12.Text = "Brans:";
             // 
@@ -487,7 +485,7 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(38, 128);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 23);
+            this.label13.Size = new System.Drawing.Size(70, 18);
             this.label13.TabIndex = 19;
             this.label13.Text = "Surname:";
             // 
@@ -497,7 +495,7 @@
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(61, 93);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 23);
+            this.label14.Size = new System.Drawing.Size(53, 18);
             this.label14.TabIndex = 18;
             this.label14.Text = "Name:";
             // 
@@ -507,7 +505,7 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(34, 58);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 23);
+            this.label15.Size = new System.Drawing.Size(76, 18);
             this.label15.TabIndex = 17;
             this.label15.Text = "Password:";
             // 
@@ -517,7 +515,7 @@
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(20, 22);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(107, 23);
+            this.label16.Size = new System.Drawing.Size(86, 18);
             this.label16.TabIndex = 16;
             this.label16.Text = "User Name:";
             // 
@@ -553,7 +551,7 @@
             this.txtTcPass.Location = new System.Drawing.Point(130, 55);
             this.txtTcPass.MaxLength = 12;
             this.txtTcPass.Name = "txtTcPass";
-            this.txtTcPass.Size = new System.Drawing.Size(189, 29);
+            this.txtTcPass.Size = new System.Drawing.Size(189, 25);
             this.txtTcPass.TabIndex = 11;
             // 
             // btnTcList
@@ -627,7 +625,7 @@
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(4, 15);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(153, 19);
+            this.label17.Size = new System.Drawing.Size(127, 16);
             this.label17.TabIndex = 0;
             this.label17.Text = "TEACHER REGISTER";
             // 
@@ -661,37 +659,23 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteDataToolStripMenuItem,
-            this.copyToBoardToolStripMenuItem,
-            this.cancelToolStripMenuItem,
-            this.cancelToolStripMenuItem1});
+            this.copyToBoardToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(177, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // deleteDataToolStripMenuItem
             // 
             this.deleteDataToolStripMenuItem.Name = "deleteDataToolStripMenuItem";
-            this.deleteDataToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
+            this.deleteDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteDataToolStripMenuItem.Text = "Delete Data";
             this.deleteDataToolStripMenuItem.Click += new System.EventHandler(this.deleteDataToolStripMenuItem_Click);
             // 
             // copyToBoardToolStripMenuItem
             // 
             this.copyToBoardToolStripMenuItem.Name = "copyToBoardToolStripMenuItem";
-            this.copyToBoardToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
+            this.copyToBoardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.copyToBoardToolStripMenuItem.Text = "Copy To Board";
             this.copyToBoardToolStripMenuItem.Click += new System.EventHandler(this.copyToBoardToolStripMenuItem_Click);
-            // 
-            // cancelToolStripMenuItem
-            // 
-            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
-            this.cancelToolStripMenuItem.Text = "Send Message";
-            // 
-            // cancelToolStripMenuItem1
-            // 
-            this.cancelToolStripMenuItem1.Name = "cancelToolStripMenuItem1";
-            this.cancelToolStripMenuItem1.Size = new System.Drawing.Size(176, 24);
-            this.cancelToolStripMenuItem1.Text = "Cancel";
             // 
             // panel1
             // 
@@ -709,7 +693,7 @@
             this.lblAdmNameSurname.ForeColor = System.Drawing.Color.White;
             this.lblAdmNameSurname.Location = new System.Drawing.Point(4, 5);
             this.lblAdmNameSurname.Name = "lblAdmNameSurname";
-            this.lblAdmNameSurname.Size = new System.Drawing.Size(180, 26);
+            this.lblAdmNameSurname.Size = new System.Drawing.Size(152, 21);
             this.lblAdmNameSurname.TabIndex = 0;
             this.lblAdmNameSurname.Text = "NAME SURNAME";
             // 
@@ -731,7 +715,7 @@
             // 
             // frmSecretaryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
@@ -831,8 +815,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyToBoardToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

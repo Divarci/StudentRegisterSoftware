@@ -11,7 +11,7 @@ namespace StudentRegisterSoftware
     {
         public SqlConnection conn()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=HASAN-DERS\SQLEXPRESS;Initial Catalog=StudentRegister;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-56RDTT9\SQLDB;Initial Catalog=StudentRegister;Integrated Security=True");
             conn.Open();
             return conn;
             /*

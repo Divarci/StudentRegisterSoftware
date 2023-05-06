@@ -88,7 +88,7 @@
             this.lblTcNameSurname.ForeColor = System.Drawing.Color.White;
             this.lblTcNameSurname.Location = new System.Drawing.Point(4, 15);
             this.lblTcNameSurname.Name = "lblTcNameSurname";
-            this.lblTcNameSurname.Size = new System.Drawing.Size(132, 19);
+            this.lblTcNameSurname.Size = new System.Drawing.Size(111, 16);
             this.lblTcNameSurname.TabIndex = 0;
             this.lblTcNameSurname.Text = "NAME SURNAME";
             // 
@@ -136,7 +136,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(169, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 19);
+            this.label4.Size = new System.Drawing.Size(65, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "SETTINGS";
             // 
@@ -147,7 +147,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(44, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 19);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "INBOX";
             // 
@@ -179,7 +179,7 @@
             this.mskex3.Location = new System.Drawing.Point(91, 244);
             this.mskex3.Mask = "00";
             this.mskex3.Name = "mskex3";
-            this.mskex3.Size = new System.Drawing.Size(43, 29);
+            this.mskex3.Size = new System.Drawing.Size(43, 25);
             this.mskex3.TabIndex = 18;
             this.mskex3.ValidatingType = typeof(int);
             // 
@@ -188,7 +188,7 @@
             this.mskex2.Location = new System.Drawing.Point(91, 200);
             this.mskex2.Mask = "00";
             this.mskex2.Name = "mskex2";
-            this.mskex2.Size = new System.Drawing.Size(43, 29);
+            this.mskex2.Size = new System.Drawing.Size(43, 25);
             this.mskex2.TabIndex = 17;
             this.mskex2.ValidatingType = typeof(int);
             // 
@@ -197,7 +197,7 @@
             this.mskex1.Location = new System.Drawing.Point(91, 156);
             this.mskex1.Mask = "00";
             this.mskex1.Name = "mskex1";
-            this.mskex1.Size = new System.Drawing.Size(43, 29);
+            this.mskex1.Size = new System.Drawing.Size(43, 25);
             this.mskex1.TabIndex = 16;
             this.mskex1.ValidatingType = typeof(int);
             // 
@@ -218,7 +218,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(11, 24);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 19);
+            this.label11.Size = new System.Drawing.Size(94, 16);
             this.label11.TabIndex = 14;
             this.label11.Text = "SELECT CLASS";
             // 
@@ -227,7 +227,7 @@
             this.cmbClass.FormattingEnabled = true;
             this.cmbClass.Location = new System.Drawing.Point(21, 53);
             this.cmbClass.Name = "cmbClass";
-            this.cmbClass.Size = new System.Drawing.Size(248, 31);
+            this.cmbClass.Size = new System.Drawing.Size(248, 26);
             this.cmbClass.TabIndex = 13;
             this.cmbClass.SelectedIndexChanged += new System.EventHandler(this.cmbClass_SelectedIndexChanged);
             // 
@@ -280,7 +280,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(17, 254);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 19);
+            this.label10.Size = new System.Drawing.Size(61, 16);
             this.label10.TabIndex = 6;
             this.label10.Text = "EXAM 3 :";
             // 
@@ -291,7 +291,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(17, 210);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 19);
+            this.label9.Size = new System.Drawing.Size(61, 16);
             this.label9.TabIndex = 5;
             this.label9.Text = "EXAM 2 :";
             // 
@@ -302,7 +302,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(17, 166);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 19);
+            this.label6.Size = new System.Drawing.Size(58, 16);
             this.label6.TabIndex = 4;
             this.label6.Text = "EXAM 1 :";
             // 
@@ -313,7 +313,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(11, 91);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 19);
+            this.label5.Size = new System.Drawing.Size(114, 16);
             this.label5.TabIndex = 3;
             this.label5.Text = "SELECT STUDENT";
             // 
@@ -322,7 +322,7 @@
             this.cmbStudent.FormattingEnabled = true;
             this.cmbStudent.Location = new System.Drawing.Point(21, 116);
             this.cmbStudent.Name = "cmbStudent";
-            this.cmbStudent.Size = new System.Drawing.Size(248, 31);
+            this.cmbStudent.Size = new System.Drawing.Size(248, 26);
             this.cmbStudent.TabIndex = 2;
             this.cmbStudent.SelectedIndexChanged += new System.EventHandler(this.cmbStudent_SelectedIndexChanged);
             // 
@@ -342,7 +342,7 @@
             this.lblStudent.ForeColor = System.Drawing.Color.White;
             this.lblStudent.Location = new System.Drawing.Point(4, 15);
             this.lblStudent.Name = "lblStudent";
-            this.lblStudent.Size = new System.Drawing.Size(199, 19);
+            this.lblStudent.Size = new System.Drawing.Size(164, 16);
             this.lblStudent.TabIndex = 0;
             this.lblStudent.Text = "STUDENT INFORMATIONS";
             // 
@@ -380,31 +380,32 @@
             this.copyToBoardToolStripMenuItem,
             this.cancelToolStripMenuItem});
             this.ctxRightClick.Name = "ctxRightClick";
-            this.ctxRightClick.Size = new System.Drawing.Size(177, 76);
+            this.ctxRightClick.Size = new System.Drawing.Size(181, 92);
+//            this.ctxRightClick.Opening += new System.ComponentModel.CancelEventHandler(this.ctxRightClick_Opening);
             // 
             // deleteDataToolStripMenuItem
             // 
             this.deleteDataToolStripMenuItem.Name = "deleteDataToolStripMenuItem";
-            this.deleteDataToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
+            this.deleteDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteDataToolStripMenuItem.Text = "Delete Data";
             this.deleteDataToolStripMenuItem.Click += new System.EventHandler(this.deleteDataToolStripMenuItem_Click);
             // 
             // copyToBoardToolStripMenuItem
             // 
             this.copyToBoardToolStripMenuItem.Name = "copyToBoardToolStripMenuItem";
-            this.copyToBoardToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
+            this.copyToBoardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.copyToBoardToolStripMenuItem.Text = "Copy To Board";
             this.copyToBoardToolStripMenuItem.Click += new System.EventHandler(this.copyToBoardToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cancelToolStripMenuItem.Text = "Cancel";
             // 
             // frmExamEntry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;

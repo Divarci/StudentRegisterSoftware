@@ -19,7 +19,7 @@ namespace StudentRegisterSoftware
         {
             InitializeComponent();
         }
-
+        //same with admn panel
         sqlconnection conn = new sqlconnection();
         public string tempUserNameSt, tempNameSt, tempSurnameSt, tempIdSt;
 

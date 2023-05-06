@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace StudentRegisterSoftware
 {
+    //same with admn panel
     public partial class frmTeacherMessage : Form
     {
         public frmTeacherMessage()
@@ -58,7 +59,7 @@ namespace StudentRegisterSoftware
             }
         }
 
-      
+
         private void frmTeacherMessage_Load(object sender, EventArgs e)
         {
             MessageList("msgtoid", dataGridView1);
@@ -120,6 +121,6 @@ namespace StudentRegisterSoftware
             cmbToSend.DataSource = dt;
         }
 
-       
+
     }
 }

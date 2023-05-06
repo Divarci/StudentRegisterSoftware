@@ -17,13 +17,14 @@ namespace StudentRegisterSoftware
         {
             InitializeComponent();
         }
-
+        //sql connecton
         sqlconnection conn = new sqlconnection();
-
+        //temporary values
         public string tempMobno, tempEmail, TempId;
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //close window
             this.Close();
         }
 
@@ -31,11 +32,12 @@ namespace StudentRegisterSoftware
         {
             if(txtEmail.Text == null || txtEmail.Text =="" || txtEmail.Text==string.Empty)
             {
-
+                //if forms are empty
                 MessageBox.Show("Please Provide an E-Mail address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                //if it is not update works
                 SqlCommand cmd = new SqlCommand("Update Tbl_Secretaries set admmobileno=@p1,admemail=@p2 where admid=@p3", conn.conn());
                 cmd.Parameters.AddWithValue("@p1", mskMobno.Text);
                 cmd.Parameters.AddWithValue("@p2", txtEmail.Text);
@@ -50,6 +52,7 @@ namespace StudentRegisterSoftware
 
         private void frmAdminInformation_Load(object sender, EventArgs e)
         {
+            //assign infos to forms
             mskMobno.Text = tempMobno;
             txtEmail.Text = tempEmail;
         }

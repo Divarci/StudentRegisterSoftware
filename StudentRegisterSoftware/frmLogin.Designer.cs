@@ -75,13 +75,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(538, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 15);
+            this.label4.Size = new System.Drawing.Size(127, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "www.bgsoftware.co.uk";
+            this.label4.Text = "www.hasandivarci.com";
             // 
             // label3
             // 
@@ -90,7 +90,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(12, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(366, 13);
+            this.label3.Size = new System.Drawing.Size(310, 12);
             this.label3.TabIndex = 9;
             this.label3.Text = "BH DESIGN AND SOFTWARE COMPANY 2023 - ALL RIGHT RESERVED";
             // 
@@ -145,7 +145,7 @@
             this.cb1.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb1.Location = new System.Drawing.Point(142, 81);
             this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(116, 23);
+            this.cb1.Size = new System.Drawing.Size(94, 20);
             this.cb1.TabIndex = 17;
             this.cb1.Text = "I am human";
             this.cb1.UseVisualStyleBackColor = true;
@@ -170,7 +170,7 @@
             this.llSU.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llSU.Location = new System.Drawing.Point(3, 123);
             this.llSU.Name = "llSU";
-            this.llSU.Size = new System.Drawing.Size(70, 19);
+            this.llSU.Size = new System.Drawing.Size(58, 16);
             this.llSU.TabIndex = 20;
             this.llSU.TabStop = true;
             this.llSU.Text = "SIGN UP";
@@ -182,18 +182,17 @@
             this.txtPass.Location = new System.Drawing.Point(142, 46);
             this.txtPass.MaxLength = 12;
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(178, 26);
+            this.txtPass.Size = new System.Drawing.Size(178, 22);
             this.txtPass.TabIndex = 16;
             this.txtPass.UseSystemPasswordChar = true;
             // 
             // mskId
             // 
-            this.mskId.Culture = new System.Globalization.CultureInfo("en-GB");
             this.mskId.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskId.Location = new System.Drawing.Point(142, 13);
             this.mskId.Mask = "000000000000";
             this.mskId.Name = "mskId";
-            this.mskId.Size = new System.Drawing.Size(178, 26);
+            this.mskId.Size = new System.Drawing.Size(178, 22);
             this.mskId.TabIndex = 12;
             this.mskId.ValidatingType = typeof(int);
             // 
@@ -203,7 +202,7 @@
             this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(31, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 19);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 22;
             this.label2.Text = "PASSWORD :";
             // 
@@ -213,7 +212,7 @@
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(61, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 19);
+            this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 21;
             this.label1.Text = "USER ID :";
             // 
@@ -261,7 +260,7 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;

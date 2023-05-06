@@ -17,6 +17,7 @@ namespace StudentRegisterSoftware
         {
             InitializeComponent();
         }
+        //same steps with frmadmininformaton
         sqlconnection conn = new sqlconnection();
 
         public string tempMobno, tempEmail, TempId;
